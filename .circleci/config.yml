@@ -1,14 +1,6 @@
 version: 2.1
 orbs:
-  node: circleci/node@x.y
   heroku: circleci/heroku@0.0.10
-jobs:
-  test:
-    docker:
-      - image: cimg/node:<node-version>
-    steps:
-      - checkout
-      - node/install-packages # Utilize commands in steps
 workflows:
   heroku_deploy:
     jobs:
