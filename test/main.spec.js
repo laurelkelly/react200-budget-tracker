@@ -26,10 +26,10 @@ describe('express', function () {
     nightmare
       .goto(url)
       .evaluate(() => document.querySelector('body').innerText)
-      .end()
       .then((text) => {
         expect(text).to.contain('Budget Tracker');
       })
+      .end()
   );
 
   it('returns the correct status code', () => axios.get(url)
